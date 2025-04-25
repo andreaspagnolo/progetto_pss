@@ -24,12 +24,18 @@ provider_mapping = {
 
 # Funzione per ottenere il poster del film e il link alla scheda del film su TMDb
 def fetch_poster_and_link(movie_id):
+    if not isinstance(movie_id, int):
+        try:
+            movie_id = int(movie_id)
+        except (ValueError, TypeError):
+            return None, None
+    
     try:
         response = requests.get(f"https://api.themoviedb.org/3/movie/{movie_id}?api_key={API_KEY}&language=en-US")
         response.raise_for_status()
         data = response.json()
-        poster_url = f"https://image.tmdb.org/t/p/w500/{data['poster_path']}"
-        movie_link = f"https://www.themoviedb.org/movie/{movie_id}"
+        poster_url = f"https://image.tmdb.org/t/p/w500/{data['poster_path']}" if data.get('poster_path') else None
+        movie_link = f"https://www.themoviedb.org/movie/{movie_id}" if movie_id else None
         return poster_url, movie_link
     except requests.exceptions.RequestException as e:
         print(f"Errore nel recupero del poster e del link per il film ID {movie_id}: {e}")

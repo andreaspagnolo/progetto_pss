@@ -168,11 +168,23 @@
 
         function addToWatchlist(movieName) {
             fetch(`/add_to_watchlist/${encodeURIComponent(movieName)}`)
-                .then(() => {
-                    alert(`${movieName} added to your watchlist!`);
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        alert(`${movieName} added to your watchlist!`);
+                    } else if (data.message === 'already_exists') {
+                        alert(`${movieName} is already in your watchlist.`);
+                    } else if (data.message === 'movie_not_found') {
+                        alert(`Movie "${movieName}" not found in database.`);
+                    } else if (data.message === 'invalid_movie_id') {
+                        alert(`Invalid movie ID for "${movieName}".`);
+                    } else {
+                        alert(`Could not add ${movieName} to your watchlist.`);
+                    }
                 })
                 .catch(error => {
                     console.error('Error:', error);
+                    alert(`Something went wrong while adding ${movieName}.`);
                 });
         }
     </script>
