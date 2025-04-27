@@ -1,3 +1,12 @@
+"""
+Modulo per la gestione del database SQLite.
+Responsabile per:
+- Connessione al database
+- Operazioni CRUD sugli utenti
+- Gestione della watchlist
+- Hash delle password
+"""
+
 import sqlite3
 from flask import g
 from werkzeug.security import generate_password_hash, check_password_hash

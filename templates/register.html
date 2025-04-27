@@ -1,6 +1,21 @@
+<!-- 
+Pagina di registrazione nuovi utenti.
+Contiene:
+- Form di registrazione (username e password)
+- Gestione messaggi flash (errori/successo)
+- Link alla pagina di login
+
+Struttura:
+1. Titolo
+2. Eventuali messaggi flash
+3. Form di registrazione
+4. Link al login
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Metadati e collegamento CSS -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register - Movie Recommender</title>
@@ -8,9 +23,11 @@
 </head>
 <body>
     <div class="container">
+        <!-- Box principale del form -->
         <div class="register-box">
             <h1>Register</h1>
             
+            <!-- Gestione messaggi flash (errori/successo) -->
             {% with messages = get_flashed_messages(with_categories=true) %}
                 {% if messages %}
                     {% for category, message in messages %}
@@ -19,16 +36,21 @@
                 {% endif %}
             {% endwith %}
             
+            <!-- Form di registrazione -->
             <form method="POST" action="{{ url_for('register') }}">
+                <!-- Campo username -->
                 <label for="username">Username:</label>
                 <input type="text" id="username" name="username" required>
                 
+                <!-- Campo password -->
                 <label for="password">Password:</label>
                 <input type="password" id="password" name="password" required>
                 
+                <!-- Pulsante submit -->
                 <button type="submit" class="register-button">Register</button>
             </form>
             
+            <!-- Link alla pagina di login -->
             <p>Already have an account? <a href="{{ url_for('login') }}">Login here</a></p>
         </div>
     </div>

@@ -1,3 +1,12 @@
+"""
+Modulo principale dell'applicazione Flask.
+Responsabile per:
+- Configurazione dell'app
+- Definizione delle route
+- Gestione delle sessioni
+- Autenticazione utenti
+"""
+
 from flask import Flask, render_template, redirect, url_for, session, g, request, flash
 from controller import get_recommendations
 from model import movies, fetch_poster_and_link

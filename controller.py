@@ -1,23 +1,54 @@
+"""
+Modulo controller che gestisce la logica tra model e view.
+Responsabile per:
+- Preparare i dati per le view
+- Gestire le richieste dell'utente
+- Coordinare model e view
+"""
+
 from flask import render_template, request
 from model import recommend, provider_mapping, movies
 import pandas as pd
 
 def get_recommendations():
-    # La lista dei film
+    """
+    Gestisce la logica per ottenere e visualizzare le raccomandazioni.
+    
+    Returns:
+        Response: Template renderizzato con i dati appropriati
+    """
+    # Lista di tutti i film disponibili
     available_movies = movies['title'].tolist()
 
-    # Se viene fatto un POST (quando l'utente preme "Consiglia")
+    # Gestione richiesta POST (form submission)
     if request.method == 'POST':
         selected_movie_name = request.form.get('movie')
         selected_platforms = request.form.getlist('platforms')
         
-        # Mappare le piattaforme ai loro ID
-        selected_provider_ids = [provider_mapping[platform] for platform in selected_platforms if platform in provider_mapping]
+        # Mappa i nomi delle piattaforme ai loro ID
+        selected_provider_ids = [
+            provider_mapping[platform] 
+            for platform in selected_platforms 
+            if platform in provider_mapping
+        ]
 
-        # Ottenere i nomi, poster e link dei film consigliati
+        # Ottieni raccomandazioni
         names, posters, links = recommend(selected_movie_name, selected_provider_ids)
 
-        return render_template('index.html', names=names, posters=posters, links=links, selected_movie_name=selected_movie_name, movies=available_movies, selected_platforms=selected_platforms)
+        return render_template(
+            'index.html', 
+            names=names, 
+            posters=posters, 
+            links=links, 
+            selected_movie_name=selected_movie_name, 
+            movies=available_movies, 
+            selected_platforms=selected_platforms
+        )
     
-    # Se non c'è stato un POST (prima che l'utente selezioni qualcosa), restituisci la pagina con la lista dei film
-    return render_template('index.html', names=None, movies=available_movies, selected_platforms=[])
+    # Caso GET (primo accesso)
+    return render_template(
+        'index.html', 
+        names=None, 
+        movies=available_movies, 
+        selected_platforms=[]
+    )

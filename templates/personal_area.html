@@ -1,3 +1,17 @@
+<!-- 
+Pagina dell'area personale dell'utente.
+Visualizza la watchlist con possibilità di:
+- Rimuovere singoli film
+- Svuotare l'intera watchlist
+- Tornare alla pagina principale
+
+Struttura:
+1. Header con titolo e pulsanti
+2. Lista film in watchlist (se presenti)
+3. Messaggio watchlist vuota (se vuota)
+4. Pulsante "Clear All" (se watchlist non vuota)
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,6 +38,7 @@
         </div>
     </div>
         
+        <!-- Sezione watchlist (se non vuota) -->
         {% if watchlist %}
             <div class="results-container">
                 <div class="results2">
@@ -46,16 +61,19 @@
                     {% endfor %}
                 </div>
             </div>
+         <!-- Messaggio se watchlist vuota -->
         {% else %}
             <p class="empty-watchlist">Your watchlist is empty.</p>
         {% endif %}
 
+        <!-- Pulsante per svuotare tutta la watchlist -->
         {% if watchlist %}
             <div class="clear-all-container">
                 <button class="clear-all-btn" onclick="clearWatchlist()">Clear All Watchlist</button>
             </div>
         {% endif %}
-
+        
+        <!-- Script per svuotare la watchlist -->
         <script>
             function clearWatchlist() {
                 if (confirm('Are you sure you want to remove all movies from your watchlist?')) {

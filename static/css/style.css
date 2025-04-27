@@ -1,3 +1,11 @@
+/*
+Foglio di stile principale.
+Contiene:
+- Stili per tutti i componenti UI
+- Layout responsive
+- Animazioni e transizioni
+*/
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
@@ -158,16 +166,17 @@ label {
     width: 100%;
     margin-top: 30px;
     padding-bottom: 20px;
+    overflow-x: auto; /* Abilita lo scorrimento orizzontale */
+    -webkit-overflow-scrolling: touch; /* Scroll fluido su mobile */
 }
 
 .results {
     display: flex;
-    justify-content: center; /* Centra i film orizzontalmente */
-    gap: 20px; /* Spazio tra i film */
+    gap: 20px;
     padding: 20px;
-    flex-wrap: nowrap; /* Impedisce il ritorno a capo */
     margin: 0 auto;
-    max-width: calc(5 * 200px + 4 * 20px); /* Calcola la larghezza totale per 5 film */
+    width: fit-content; /* Adatta la larghezza al contenuto */
+    max-width: 100%; /* Non superare la larghezza del container */
 }
 
 .movie {
@@ -178,12 +187,33 @@ label {
     text-align: center;
     display: flex;
     flex-direction: column;
-    width: 180px; 
+    width: 180px;
     min-height: 330px;
     flex-shrink: 0; /* Impedisce il ridimensionamento */
     transition: transform 0.2s ease;
-    position: relative; /* Per posizionare il pulsante assolutamente */
-    overflow: hidden; 
+    position: relative;
+    overflow: hidden;
+}
+
+/* Stile della scrollbar */
+.results-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.results-container::-webkit-scrollbar-track {
+    background: #f0f0f0;
+    border-radius: 10px;
+}
+
+.results-container::-webkit-scrollbar-thumb {
+    background-color: #113f67;
+    border-radius: 10px;
+}
+
+/* Per Firefox */
+.results-container {
+    scrollbar-width: thin;
+    scrollbar-color: #113f67 #f0f0f0;
 }
 
 .movie-link h3 {
