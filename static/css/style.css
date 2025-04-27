@@ -121,7 +121,7 @@ label {
 .platform-dropdown {
     display: none;
     position: fixed;
-    top: 50%;
+    top: 35%;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: white;
@@ -334,11 +334,13 @@ label {
 
 .back-button {
     display: inline-block;
+    margin-top:20px;
     margin-bottom: 20px;
     color: #113f67;
     text-decoration: none;
     font-weight: bold;
     transition: color 0.2s ease;
+    top: 0%;
 }
 
 .back-button:hover {
@@ -465,6 +467,178 @@ label {
 
 .remove-btn-watchlist:hover::after {
     opacity: 1;
+}
+
+.clear-all-container {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.clear-all-btn {
+    padding: 10px 20px;
+    background-color: #ff4444;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.clear-all-btn:hover {
+    background-color: #cc0000;
+}
+
+/* Nuovi stili per login/register */
+.login-box, .register-box {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.login-box h1, .register-box h1 {
+    margin-bottom: 30px;
+    color: #113f67;
+}
+
+.login-box form, .register-box form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.login-box input, .register-box input {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.login-button, .register-button {
+    padding: 12px;
+    background-color: #113f67;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.login-button:hover, .register-button:hover {
+    background-color: #0056b3;
+}
+
+.login-box p, .register-box p {
+    margin-top: 20px;
+    color: #555;
+}
+
+.login-box a, .register-box a {
+    color: #113f67;
+    text-decoration: none;
+}
+
+.login-box a:hover, .register-box a:hover {
+    text-decoration: underline;
+}
+
+.flash-error {
+    color: #ff4444;
+    margin-bottom: 15px;
+}
+
+.flash-success {
+    color: #00C851;
+    margin-bottom: 15px;
+}
+
+
+/* Stile per logout */
+.title {
+    position: fixed;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0 auto;
+    font-size: 24px;
+    white-space: nowrap;
+    z-index: 5;
+}
+
+.logout-button {
+    position: fixed;
+    left: 20px;
+    top: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #113f67;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    z-index: 10;
+}
+
+.logout-button img {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.logout-text {
+    opacity: 0;
+    width: 0;
+    margin-left: 0;
+    transition: all 0.3s ease;
+    font-family: 'Oswald', sans-serif;
+    color: white;
+    font-size: 14px;
+}
+
+.logout-button:hover {
+    width: 120px;
+    border-radius: 20px;
+    justify-content: flex-start;
+    padding-left: 15px;
+}
+
+.logout-button:hover .logout-text {
+    opacity: 1;
+    width: auto;
+    margin-left: 8px;
+}
+
+/* Pulsante Back (modificato per allineamento verticale) */
+.back-button {
+    position: fixed;
+    margin-top: 0px;
+    top: 20px;
+    right: 20px;
+    padding: 8px 15px;
+    background-color: #f0f0f0;
+    color: #113f67;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.2s ease;
+    height: 40px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    z-index: 10;
+}
+
+.back-button:hover {
+    background-color: #113f67;
+    color: white;
 }
 
 /* Media query per schermi più piccoli */

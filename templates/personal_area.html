@@ -8,10 +8,21 @@
 </head>
 <body>
     <div class="container">
+        <!-- Pulsante Logout circolare -->
+        <a class="logout-button" href="{{ url_for('logout') }}">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" color="white">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+            <span class="logout-text">LOGOUT</span>
+        </a>
+        
+        <!-- Header con titolo e pulsante back -->
         <div class="header">
-            <h1>My Watchlist</h1>
+            <h1 class = "title">My Watchlist</h1>
             <a href="{{ url_for('index') }}" class="back-button">← Back to Recommendations</a>
         </div>
+    </div>
         
         {% if watchlist %}
             <div class="results-container">
@@ -38,6 +49,29 @@
         {% else %}
             <p class="empty-watchlist">Your watchlist is empty.</p>
         {% endif %}
-    </div>
+
+        {% if watchlist %}
+            <div class="clear-all-container">
+                <button class="clear-all-btn" onclick="clearWatchlist()">Clear All Watchlist</button>
+            </div>
+        {% endif %}
+
+        <script>
+            function clearWatchlist() {
+                if (confirm('Are you sure you want to remove all movies from your watchlist?')) {
+                    fetch('/clear_watchlist')
+                        .then(response => {
+                            if (response.redirected) {
+                                window.location.href = response.url;
+                            }
+                        })
+                        .catch(error => {
+                            console.error('Error:', error);
+                            alert('Something went wrong while clearing the watchlist.');
+                        });
+                }
+            }
+        </script>
+
 </body>
 </html>
