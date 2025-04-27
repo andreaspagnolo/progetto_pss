@@ -1,18 +1,17 @@
 # progetto_pss
 
-##Descrizione del Progetto
+## Descrizione del Progetto
 Movie Recommender è un'applicazione web che suggerisce film simili a quello selezionato dall'utente, filtrando i risultati in base alle piattaforme di streaming disponibili. Il sistema include:
+- Un motore di raccomandazione basato su similarità tra film
 
-    - Un motore di raccomandazione basato su similarità tra film
+- Gestione personalizzata della watchlist per ogni utente
 
-    - Gestione personalizzata della watchlist per ogni utente
+- Autenticazione utente (login/registrazione)
 
-    - Autenticazione utente (login/registrazione)
-
-    - Integrazione con l'API TMDb per poster e informazioni sui film
+- Integrazione con l'API TMDb per poster e informazioni sui film
     
 
-##Tecnologie Utilizzate:
+## Tecnologie Utilizzate:
     
     Backend: Python con Flask
 
