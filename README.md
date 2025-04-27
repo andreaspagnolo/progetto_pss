@@ -23,31 +23,7 @@ Movie Recommender è un'applicazione web che suggerisce film simili a quello sel
 - API Esterna: The Movie Database (TMDb) API
 
 ## Struttura del Progetto (Pattern MVC)
-movie-recommender/
-│
-├── static/
-│   ├── css/
-│   │   └── style.css          # Stili CSS
-│   └── js/
-│       ├── index.js           # Logica JS pagina principale
-│       └── personal_area.js   # Logica JS area personale
-│
-├── templates/
-│   ├── index.html             # Pagina principale
-│   ├── login.html             # Pagina di login
-│   ├── register.html          # Pagina di registrazione
-│   └── personal_area.html     # Area personale/watchlist
-│
-├── data/                      # Dati e modelli precalcolati
-│   ├── movie_dict.pkl         # Dizionario dei film
-│   ├── similarity.pkl         # Matrice di similarità
-│   └── providers_movies.csv   # Film per piattaforma
-│
-├── app.py                     # Applicazione principale (route)
-├── controller.py              # Controller MVC
-├── database.py                # Model per il database
-├── model.py                   # Model per raccomandazioni
-└── schema.sql                 # Schema del database
+![immagine](https://github.com/user-attachments/assets/b25c8c94-5ca9-42a1-8cd0-39ea39f67078)
 
 ## Funzionalità Principali
 1. Sistema di Raccomandazione
@@ -64,18 +40,18 @@ movie-recommender/
 
         - Tim Vision
 
-3. Gestione Watchlist
+2. Gestione Watchlist
 
-    Aggiungi/rimuovi film dalla tua lista personale
+    - Aggiungi/rimuovi film dalla tua lista personale
 
-    Svuota completamente la watchlist
+    - Svuota completamente la watchlist
 
-    Visualizza poster e link ai dettagli dei film
+    - Visualizza poster e link ai dettagli dei film
 
-4. Autenticazione Utente
+3. Autenticazione Utente
 
-    Registrazione nuovo account
+    - Registrazione nuovo account
 
-    Login/logout
+    - Login/logout
 
-    Watchlist personale per ogni utente
+    - Watchlist personale per ogni utente
