@@ -1,0 +1,16 @@
+# Ignora cache di Python
+__pycache__/
+*.py[cod]
+
+# Ignora ambienti virtuali
+env/
+venv/
+
+# Ignora file temporanei di sistema
+.DS_Store
+
+# Ignora file di backup
+*.bak
+*.swp
+data/similarity.pkl
+data/similarity.pkl
