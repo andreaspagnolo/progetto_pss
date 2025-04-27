@@ -1,4 +1,4 @@
-# progetto_pss
+[deepseek_20250427_6b48c1.txt](https://github.com/user-attachments/files/19930622/deepseek_20250427_6b48c1.txt)# progetto_pss
 
 ## Descrizione del Progetto
 Movie Recommender è un'applicazione web che suggerisce film simili a quello selezionato dall'utente, filtrando i risultati in base alle piattaforme di streaming disponibili. Il sistema include:
@@ -23,7 +23,32 @@ Movie Recommender è un'applicazione web che suggerisce film simili a quello sel
 - API Esterna: The Movie Database (TMDb) API
 
 ## Struttura del Progetto (Pattern MVC)
-![immagine](https://github.com/user-attachments/assets/b25c8c94-5ca9-42a1-8cd0-39ea39f67078)
+[Uploadinmovie-recommender/
+│
+├── static/
+│   ├── css/
+│   │   └── style.css          # Stili CSS
+│   └── js/
+│       ├── index.js           # Logica JS pagina principale
+│       └── personal_area.js   # Logica JS area personale
+│
+├── templates/
+│   ├── index.html             # Pagina principale
+│   ├── login.html             # Pagina di login
+│   ├── register.html          # Pagina di registrazione
+│   └── personal_area.html     # Area personale/watchlist
+│
+├── data/                      # Dati e modelli precalcolati
+│   ├── movie_dict.pkl         # Dizionario dei film
+│   ├── similarity.pkl         # Matrice di similarità
+│   └── providers_movies.csv   # Film per piattaforma
+│
+├── app.py                     # Applicazione principale (route)
+├── controller.py              # Controller MVC
+├── database.py                # Model per il database
+├── model.py                   # Model per raccomandazioni
+└── schema.sql                 # Schema del databaseg deepseek_20250427_6b48c1.txt…]()
+
 
 ## Funzionalità Principali
 1. Sistema di Raccomandazione
