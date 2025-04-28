@@ -27,12 +27,6 @@ Movie Recommender è un'applicazione web che suggerisce film simili a quello sel
 .
 ├── README.md
 ├── __init__.py
-├── __pycache__
-│   ├── __init__.cpython-310.pyc
-│   ├── app.cpython-310.pyc
-│   ├── controller.cpython-310.pyc
-│   ├── database.cpython-310.pyc
-│   └── model.cpython-310.pyc
 ├── app.py
 ├── controller.py
 ├── data
@@ -41,7 +35,6 @@ Movie Recommender è un'applicazione web che suggerisce film simili a quello sel
 │   ├── providers_movies.csv
 │   └── similarity.pkl
 ├── database.py
-├── instance
 ├── model.py
 ├── requirements.txt
 ├── schema.sql
@@ -57,6 +50,7 @@ Movie Recommender è un'applicazione web che suggerisce film simili a quello sel
 │   ├── personal_area.html
 │   └── register.html
 └── watchlist.db
+
 ```
 
 ## Funzionalità Principali
