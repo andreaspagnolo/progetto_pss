@@ -5,6 +5,7 @@ __pycache__/
 # Ignora ambienti virtuali
 env/
 venv/
+ambiente_progetto_pss/
 
 # Ignora file temporanei di sistema
 .DS_Store
@@ -12,5 +13,6 @@ venv/
 # Ignora file di backup
 *.bak
 *.swp
-data/similarity.pkl
+
+# ignore dati pesanti
 data/similarity.pkl
