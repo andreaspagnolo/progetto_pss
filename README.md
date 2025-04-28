@@ -23,32 +23,41 @@ Movie Recommender è un'applicazione web che suggerisce film simili a quello sel
 - API Esterna: The Movie Database (TMDb) API
 
 ## Struttura del Progetto (Pattern MVC)
-[Uploadinmovie-recommender/
-│
-├── static/
-│   ├── css/
-│   │   └── style.css          # Stili CSS
-│   └── js/
-│       ├── index.js           # Logica JS pagina principale
-│       └── personal_area.js   # Logica JS area personale
-│
-├── templates/
-│   ├── index.html             # Pagina principale
-│   ├── login.html             # Pagina di login
-│   ├── register.html          # Pagina di registrazione
-│   └── personal_area.html     # Area personale/watchlist
-│
-├── data/                      # Dati e modelli precalcolati
-│   ├── movie_dict.pkl         # Dizionario dei film
-│   ├── similarity.pkl         # Matrice di similarità
-│   └── providers_movies.csv   # Film per piattaforma
-│
-├── app.py                     # Applicazione principale (route)
-├── controller.py              # Controller MVC
-├── database.py                # Model per il database
-├── model.py                   # Model per raccomandazioni
-└── schema.sql                 # Schema del databaseg deepseek_20250427_6b48c1.txt…]()
-
+'''bash
+.
+├── README.md
+├── __init__.py
+├── __pycache__
+│   ├── __init__.cpython-310.pyc
+│   ├── app.cpython-310.pyc
+│   ├── controller.cpython-310.pyc
+│   ├── database.cpython-310.pyc
+│   └── model.cpython-310.pyc
+├── app.py
+├── controller.py
+├── data
+│   ├── movie_dict.pkl
+│   ├── movies.pkl
+│   ├── providers_movies.csv
+│   └── similarity.pkl
+├── database.py
+├── instance
+├── model.py
+├── requirements.txt
+├── schema.sql
+├── static
+│   ├── css
+│   │   └── style.css
+│   └── js
+│       ├── index.js
+│       └── personal_area.js
+├── templates
+│   ├── index.html
+│   ├── login.html
+│   ├── personal_area.html
+│   └── register.html
+└── watchlist.db
+'''
 
 ## Funzionalità Principali
 1. Sistema di Raccomandazione
