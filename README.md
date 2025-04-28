@@ -98,7 +98,26 @@ https://github.com/tuo-repository/movie-recommender.git
 cd movie-recommender
 ```
 2. Crea e attiva un ambiente virtuale (opzionale ma consigliato)
-4. Installa le dipendenze
-5. Avvia l'applicazione
-6. Apri nel browser
+```
+python -m venv venv
+source venv/bin/activate  # Linux/Mac
+venv\Scripts\activate     # Windows
+```
+3. Installa le dipendenze
+```
+pip install -r requirements.txt
+```
+4. Avvia l'applicazione
+```
+python app.py
+```
+5. Apri nel browser
+```
+http://localhost:5000
+```
 
+## Configurazione
+Per utilizzare l'API TMDb, assicurati di avere una chiave API valida nel file model.py:
+```
+API_KEY = 'tua_chiave_api_tmdb'
+```
