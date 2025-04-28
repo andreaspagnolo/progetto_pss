@@ -74,7 +74,7 @@ Movie Recommender è un'applicazione web che suggerisce film simili a quello sel
 
     - Svuota completamente la watchlist
 
-    - Visualizza poster e link ai dettagli dei film
+    - Visualizza titolo poster e link ai dettagli dei film
 
 3. Autenticazione Utente
 
@@ -83,3 +83,19 @@ Movie Recommender è un'applicazione web che suggerisce film simili a quello sel
     - Login/logout
 
     - Watchlist personale per ogni utente
+
+## Installazione e Avvio
+
+### Prerequisiti
+- Python 3.x
+- Pip
+
+### Setup
+
+1. Clona repository git clone ``` https://github.com/tuo-repository/movie-recommender.git
+cd movie-recommender```
+2. Crea e attiva un ambiente virtuale (opzionale ma consigliato)
+3. Installa le dipendenze
+4. Avvia l'applicazione
+5. Apri nel browser
+
