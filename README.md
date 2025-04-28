@@ -1,5 +1,3 @@
-[deepseek_20250427_6b48c1.txt](https://github.com/user-attachments/files/19930622/deepseek_20250427_6b48c1.txt)# progetto_pss
-
 ## Descrizione del Progetto
 Movie Recommender è un'applicazione web che suggerisce film simili a quello selezionato dall'utente, filtrando i risultati in base alle piattaforme di streaming disponibili. Il sistema include:
 - Un motore di raccomandazione basato su similarità tra film
