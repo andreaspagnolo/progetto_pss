@@ -1,4 +1,6 @@
 ## Descrizione del Progetto
+<img width="1423" alt="Screenshot 2025-04-28 alle 10 32 38" src="https://github.com/user-attachments/assets/befa0667-b81e-401e-b857-7d2f1f8895b1" />
+
 Movie Recommender è un'applicazione web che suggerisce film simili a quello selezionato dall'utente, filtrando i risultati in base alle piattaforme di streaming disponibili. Il sistema include:
 - Un motore di raccomandazione basato su similarità tra film
 
