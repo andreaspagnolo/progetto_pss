@@ -73,23 +73,8 @@ Struttura:
             </div>
         {% endif %}
         
-        <!-- Script per svuotare la watchlist -->
-        <script>
-            function clearWatchlist() {
-                if (confirm('Are you sure you want to remove all movies from your watchlist?')) {
-                    fetch('/clear_watchlist')
-                        .then(response => {
-                            if (response.redirected) {
-                                window.location.href = response.url;
-                            }
-                        })
-                        .catch(error => {
-                            console.error('Error:', error);
-                            alert('Something went wrong while clearing the watchlist.');
-                        });
-                }
-            }
-        </script>
+        <!-- richiama script javascript -->
+        <script src="{{ url_for('static', filename='js/personal_area.js') }}"></script>
 
 </body>
 </html>
