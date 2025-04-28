@@ -92,10 +92,13 @@ Movie Recommender è un'applicazione web che suggerisce film simili a quello sel
 
 ### Setup
 
-1. Clona repository git clone ``` https://github.com/tuo-repository/movie-recommender.git
-cd movie-recommender```
+1. Clona repository git clone
+```
+https://github.com/tuo-repository/movie-recommender.git
+cd movie-recommender
+```
 2. Crea e attiva un ambiente virtuale (opzionale ma consigliato)
-3. Installa le dipendenze
-4. Avvia l'applicazione
-5. Apri nel browser
+4. Installa le dipendenze
+5. Avvia l'applicazione
+6. Apri nel browser
 
