@@ -23,8 +23,7 @@ Movie Recommender è un'applicazione web che suggerisce film simili a quello sel
 - API Esterna: The Movie Database (TMDb) API
 
 ## Struttura del Progetto (Pattern MVC)
-'''bash
-.
+'''
 ├── README.md
 ├── __init__.py
 ├── __pycache__
