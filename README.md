@@ -84,6 +84,12 @@ Movie Recommender è un'applicazione web che suggerisce film simili a quello sel
 
     - Watchlist personale per ogni utente
 
+## Configurazione
+Per utilizzare l'API TMDb, crea un file .env nella directory del progetto e inserisci al suo interno il seguente codice con la tua chiave:
+```
+API_KEY = 'tua_chiave_api_tmdb'
+```
+
 ## Installazione e Avvio
 
 ### Prerequisiti
@@ -114,10 +120,4 @@ python app.py
 5. Apri nel browser
 ```
 http://localhost:5000
-```
-
-## Configurazione
-Per utilizzare l'API TMDb, assicurati di avere una chiave API valida nel file model.py:
-```
-API_KEY = 'tua_chiave_api_tmdb'
 ```
