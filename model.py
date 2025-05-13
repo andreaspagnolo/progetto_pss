@@ -10,9 +10,12 @@ Gestisce:
 import pandas as pd
 import pickle
 import requests
+from dotenv import load_dotenv
+import os
 
 # Chiave API per TMDb (da spostare in configurazione in produzione)
-API_KEY = '9aba39119c399b5f3985ab6825be0aff'
+load_dotenv()
+API_KEY = os.getenv('API_KEY')
 
 # Caricamento dati delle piattaforme di streaming da CSV
 providers_movies_df = pd.read_csv('data/providers_movies.csv')

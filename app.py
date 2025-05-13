@@ -13,9 +13,10 @@ from model import movies, fetch_poster_and_link
 from database import get_db, init_db, close_db, create_user, verify_user
 import sqlite3
 from flask import jsonify
+import os
 
 app = Flask(__name__)
-app.secret_key = 'your_secret_key_here'
+app.secret_key = os.urandom(24)
 app.teardown_appcontext(close_db)
 
 # Inizializza il database
