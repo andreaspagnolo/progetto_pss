@@ -7,6 +7,9 @@ env/
 venv/
 ambiente_progetto_pss/
 
+#ignore file contenti chiavi private
+key.env
+
 # Ignora file temporanei di sistema
 .DS_Store
 
