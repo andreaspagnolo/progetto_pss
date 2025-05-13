@@ -17,5 +17,8 @@ key.env
 *.bak
 *.swp
 
+#ignore file database
+watchlist.db
+
 # ignore dati pesanti
 data/similarity.pkl
