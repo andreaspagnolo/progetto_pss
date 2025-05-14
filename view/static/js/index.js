@@ -103,3 +103,20 @@ function addToWatchlist(movieName) {
 document.querySelectorAll('input[name="platform"]').forEach(checkbox => {
     checkbox.addEventListener('change', updateSelectedPlatforms);
 });
+
+document.getElementById('platform-dropdown-button').addEventListener('click', function(e) {
+    e.stopPropagation();
+    const dropdown = document.getElementById('platform-dropdown');
+    dropdown.classList.toggle('show');
+});
+
+// Chiudi il dropdown quando si clicca fuori
+document.addEventListener('click', function() {
+    const dropdown = document.getElementById('platform-dropdown');
+    dropdown.classList.remove('show');
+});
+
+// Previeni la chiusura quando si clicca dentro il dropdown
+document.getElementById('platform-dropdown').addEventListener('click', function(e) {
+    e.stopPropagation();
+});

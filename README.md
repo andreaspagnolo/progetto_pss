@@ -9,7 +9,7 @@ Movie Recommender è un'applicazione web che suggerisce film simili a quello sel
 - Autenticazione utente (login/registrazione)
 
 - Integrazione con l'API TMDb per poster e informazioni sui film
-    
+
 
 ## Tecnologie Utilizzate:
 - Backend: Python con Flask
@@ -28,27 +28,39 @@ Movie Recommender è un'applicazione web che suggerisce film simili a quello sel
 ├── README.md
 ├── __init__.py
 ├── app.py
-├── controller.py
+├── controller
+│   ├── __init__.py
+│   ├── __pycache__
+│   │   ├── __init__.cpython-310.pyc
+│   │   └── routes.cpython-310.pyc
+│   └── routes.py
 ├── data
 │   ├── movie_dict.pkl
 │   ├── movies.pkl
 │   ├── providers_movies.csv
 │   └── similarity.pkl
-├── database.py
-├── model.py
+├── model
+│   ├── __init__.py
+│   ├── __pycache__
+│   │   ├── __init__.cpython-310.pyc
+│   │   ├── database.cpython-310.pyc
+│   │   └── recommendation_logic.cpython-310.pyc
+│   ├── database.py
+│   ├── recommendation_logic.py
+│   └── schema.sql
 ├── requirements.txt
-├── schema.sql
-├── static
-│   ├── css
-│   │   └── style.css
-│   └── js
-│       ├── index.js
-│       └── personal_area.js
-├── templates
-│   ├── index.html
-│   ├── login.html
-│   ├── personal_area.html
-│   └── register.html
+├── view
+│   ├── static
+│   │   ├── css
+│   │   │   └── style.css
+│   │   └── js
+│   │       ├── index.js
+│   │       └── personal_area.js
+│   └── templates
+│       ├── index.html
+│       ├── login.html
+│       ├── personal_area.html
+│       └── register.html
 └── watchlist.db
 
 ```

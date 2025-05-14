@@ -74,11 +74,13 @@ Contiene:
         
         <!-- Menu a tendina delle piattaforme (ora dentro al form) -->
         <div class="platform-dropdown" id="platform-dropdown">
-            <label><input type="checkbox" name="platform" value="Netflix" {% if "Netflix" in selected_platforms %} checked {% endif %}> Netflix</label>
-            <label><input type="checkbox" name="platform" value="Disney+" {% if "Disney+" in selected_platforms %} checked {% endif %}> Disney+</label>
-            <label><input type="checkbox" name="platform" value="Amazon Prime" {% if "Amazon Prime" in selected_platforms %} checked {% endif %}> Amazon Prime</label>
-            <label><input type="checkbox" name="platform" value="Apple tv" {% if "Apple tv" in selected_platforms %} checked {% endif %}> Apple tv</label>
-            <label><input type="checkbox" name="platform" value="Tim vision" {% if "Tim vision" in selected_platforms %} checked {% endif %}> Tim vision</label>
+            <div class="dropdown-content">
+                <label><input type="checkbox" name="platform" value="Netflix" {% if "Netflix" in selected_platforms %} checked {% endif %}> Netflix</label>
+                <label><input type="checkbox" name="platform" value="Disney+" {% if "Disney+" in selected_platforms %} checked {% endif %}> Disney+</label>
+                <label><input type="checkbox" name="platform" value="Amazon Prime" {% if "Amazon Prime" in selected_platforms %} checked {% endif %}> Amazon Prime</label>
+                <label><input type="checkbox" name="platform" value="Apple tv" {% if "Apple tv" in selected_platforms %} checked {% endif %}> Apple tv</label>
+                <label><input type="checkbox" name="platform" value="Tim vision" {% if "Tim vision" in selected_platforms %} checked {% endif %}> Tim vision</label>
+            </div>
         </div>
         
         <!-- Risultati dei film consigliati -->
