@@ -22,3 +22,4 @@ watchlist.db
 
 # ignore dati pesanti
 data/similarity.pkl
+.vscode/
