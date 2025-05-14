@@ -8,14 +8,18 @@ Responsabile per:
 """
 
 from flask import Flask, render_template, redirect, url_for, session, g, request, flash
-from controller.controller import get_recommendations
-from model.model import movies, fetch_poster_and_link
+from controller.routes import get_recommendations
+from model.recommendation_logic import movies, fetch_poster_and_link
 from model.database import get_db, init_db, close_db, create_user, verify_user
 import sqlite3
 from flask import jsonify
 import os
 
-app = Flask(__name__)
+app = Flask(
+    __name__,
+    template_folder='view/templates',
+    static_folder='view/static'
+)
 app.secret_key = os.urandom(24)
 app.teardown_appcontext(close_db)
 

@@ -7,7 +7,7 @@ Responsabile per:
 """
 
 from flask import render_template, request
-from model.model import recommend, provider_mapping, movies
+from model.recommendation_logic import recommend, provider_mapping, movies
 import pandas as pd
 
 def get_recommendations():
