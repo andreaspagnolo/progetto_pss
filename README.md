@@ -50,8 +50,7 @@ Movie Recommender è un'applicazione web che suggerisce film simili a quello sel
 │   ├── movies.pkl
 │   ├── providers_movies.csv
 │   └── similarity.pkl
-├── instance
-│   └── watchlist.db
+├── watchlist.db
 ├── requirements.txt
 ├── run.py
 └── watchlist.db
