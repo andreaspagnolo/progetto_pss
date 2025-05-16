@@ -8,17 +8,17 @@ Responsabile per:
 """
 
 from flask import Flask, render_template, redirect, url_for, session, g, request, flash
-from controller.routes import get_recommendations
-from model.recommendation_logic import movies, fetch_poster_and_link
-from model.database import get_db, init_db, close_db, create_user, verify_user
+from app.controllers import get_recommendations
+from app.models import movies, fetch_poster_and_link
+from app.database import get_db, init_db, close_db, create_user, verify_user
 import sqlite3
 from flask import jsonify
 import os
 
 app = Flask(
     __name__,
-    template_folder='view/templates',
-    static_folder='view/static'
+    template_folder='app/templates',
+    static_folder='app/static'
 )
 app.secret_key = os.urandom(24)
 app.teardown_appcontext(close_db)
