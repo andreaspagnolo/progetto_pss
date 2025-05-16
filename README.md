@@ -27,40 +27,37 @@ Movie Recommender è un'applicazione web che suggerisce film simili a quello sel
 .
 ├── README.md
 ├── __init__.py
-├── app.py
-├── controller
+├── app
 │   ├── __init__.py
 │   ├── __pycache__
 │   │   ├── __init__.cpython-310.pyc
-│   │   └── routes.cpython-310.pyc
-│   └── routes.py
+│   │   ├── controllers.cpython-310.pyc
+│   │   ├── database.cpython-310.pyc
+│   │   └── models.cpython-310.pyc
+│   ├── controllers.py
+│   ├── database.py
+│   ├── models.py
+│   ├── schema.sql
+│   ├── static
+│   │   ├── css
+│   │   │   └── style.css
+│   │   └── js
+│   │       ├── indexController.js
+│   │       ├── indexView.js
+│   │       └── personalAreaController.js
+│   ├── templates
+│   │   ├── index.html
+│   │   ├── login.html
+│   │   ├── personal_area.html
+│   │   └── register.html
+│   └── watchlist.db
+├── app.py
 ├── data
 │   ├── movie_dict.pkl
 │   ├── movies.pkl
 │   ├── providers_movies.csv
 │   └── similarity.pkl
-├── model
-│   ├── __init__.py
-│   ├── __pycache__
-│   │   ├── __init__.cpython-310.pyc
-│   │   ├── database.cpython-310.pyc
-│   │   └── recommendation_logic.cpython-310.pyc
-│   ├── database.py
-│   ├── recommendation_logic.py
-│   └── schema.sql
 ├── requirements.txt
-├── view
-│   ├── static
-│   │   ├── css
-│   │   │   └── style.css
-│   │   └── js
-│   │       ├── index.js
-│   │       └── personal_area.js
-│   └── templates
-│       ├── index.html
-│       ├── login.html
-│       ├── personal_area.html
-│       └── register.html
 └── watchlist.db
 
 ```
