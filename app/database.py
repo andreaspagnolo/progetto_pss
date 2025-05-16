@@ -10,8 +10,9 @@ Responsabile per:
 import sqlite3
 from flask import g
 from werkzeug.security import generate_password_hash, check_password_hash
+import os
 
-DATABASE = 'watchlist.db'
+DATABASE = os.path.join('instance', 'watchlist.db')
 
 def get_db():
     db = getattr(g, '_database', None)
