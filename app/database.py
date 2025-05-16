@@ -12,7 +12,7 @@ from flask import g
 from werkzeug.security import generate_password_hash, check_password_hash
 import os
 
-DATABASE = os.path.join('instance', 'watchlist.db')
+DATABASE = 'watchlist.db'
 
 def get_db():
     db = getattr(g, '_database', None)
