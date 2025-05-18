@@ -119,7 +119,7 @@ pip install -r requirements.txt
 ```
 4. Avvia l'applicazione
 ```
-python app.py
+python run.py
 ```
 5. Apri nel browser
 ```
