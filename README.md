@@ -1,3 +1,5 @@
+# Andrea Spagnolo 879254
+
 ## Descrizione del Progetto
 <img width="1423" alt="Screenshot 2025-04-28 alle 10 32 38" src="https://github.com/user-attachments/assets/befa0667-b81e-401e-b857-7d2f1f8895b1" />
 
